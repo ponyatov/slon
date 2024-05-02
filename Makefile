@@ -51,6 +51,12 @@ bin/$(MODULE): $(D) $(J) Makefile
 # doc
 .PHONY: doc
 doc:
+
+.PHONY: doxy
+doxy: .doxygen $(C) $(H) $(D) README.md
+	rm -rf docs ; rsync -r ~/metadoc/$(MODULE)/* doc
+	doxygen $< 1>/dev/null && git add -f doc docs
+
 # install
 .PHONY: install update gz ref
 install: doc gz ref

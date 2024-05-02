@@ -1,0 +1,14 @@
+{
+    "name":        "slon",
+    "description": "Stack Language Object Network",
+    "homepage":    "https://github.com/ponyatov/d",
+    "authors":    ["Dmitry Ponyatov <dponyatov@gmail.com>"],
+    "copyright":   "Copyright © 2024, Dmitry Ponyatov <dponyatov@gmail.com>",
+    "license":     "MIT",
+    "targetType":  "executable",
+    "targetPath":  "bin",
+    "targetName":  "slon",
+    "subPackages":  [],
+    "dependencies": {
+    }
+}

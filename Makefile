@@ -34,7 +34,7 @@ S += lib/$(MODULE).sl $(wildcard lib/*.sl)
 .PHONY: all run
 all: bin/$(MODULE)
 run: bin/$(MODULE) $(S)
-	$(RUN) -- $<
+	$^
 
 # format
 .PHONY: format
@@ -46,7 +46,7 @@ tmp/format_d: $(D)
 
 # rule
 bin/$(MODULE): $(D) $(J) Makefile
-	$(BLD)
+	$(BLD) && touch $@
 
 # doc
 .PHONY: doc

@@ -10,5 +10,6 @@
     "targetName":  "slon",
     "subPackages":  [],
     "dependencies": {
+        "pegged": "~>0.4.9",
     }
 }

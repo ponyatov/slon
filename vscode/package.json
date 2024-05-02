@@ -1,0 +1,64 @@
+{
+    "name": "slon",
+    "displayName": "Script Language Object Network",
+    "version": "0.0.1",
+    "publisher": "dponyatov",
+    "author": {
+        "name": "Dmitry Ponyatov",
+        "email": "dponyatov@gmail.com"
+    },
+    "categories": [
+        "Programming Languages",
+        "Debuggers",
+        "Notebooks",
+        "Snippets"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ponyatov/slon/tree/shadow/vscode"
+    },
+    "homepage": "https://github.com/ponyatov/slon/tree/shadow",
+    "icon": "logo.png",
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "activationEvents": [
+        "onCommand:slon.hello",
+        "onStartupFinished",
+        "onLanguage:slon"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "slon.hello",
+                "title":   "slon: Hello"
+            }
+        ],
+        "languages": [
+            {
+                "id": "slon",
+                "aliases": [
+                    "slon"
+                ],
+                "extensions": [
+                    ".sl"
+                ],
+                "configuration": "./slon.configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "slon",
+                "scopeName": "script.slon",
+                "path": "./slon.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "slon",
+                "path": "./slon.snippets.json"
+            }
+        ]
+    }
+}

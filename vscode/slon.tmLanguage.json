@@ -1,0 +1,76 @@
+{
+    "name": "slon",
+    "scopeName": "script.slon",
+    "fileTypes": [
+        ".sl"
+    ],
+    "patterns": [
+        {
+            "include": "#comment"
+        },
+        {
+            "include": "#number"
+        },
+        {
+            "include": "#def"
+        },
+        {
+            "include": "#directive"
+        },
+        {
+            "include": "#command"
+        }
+    ],
+    "repository": {
+        "comment": {
+            "patterns": [
+                {
+                    "comment": "pythonic/shell line comment",
+                    "match": "#.*$",
+                    "name": "comment.line.number-sign"
+                },
+                {
+                    "comment": "block comment",
+                    "match": "\\(.*?\\)",
+                    "name": "comment.block"
+                }
+            ]
+        },
+        "number": {
+            "patterns": [
+                {
+                    "comment": "integer",
+                    "match": "[+\\-]?[0-9]+",
+                    "name": "constant.numeric.integer"
+                }
+            ]
+        },
+        "def": {
+            "patterns": [
+                {
+                    "comment": "colon definition",
+                    "match": ": +[a-zA-Z_]+",
+                    "name": "entity.name.function"
+                }
+            ]
+        },
+        "directive": {
+            "patterns": [
+                {
+                    "comment": "directive",
+                    "match": "\\.[a-z]+",
+                    "name": "keyword.directive"
+                }
+            ]
+        },
+        "command": {
+            "patterns": [
+                {
+                    "comment": "command",
+                    "match": "\\b(nop|halt)\\b",
+                    "name": "keyword.control"
+                }
+            ]
+        }
+    }
+}

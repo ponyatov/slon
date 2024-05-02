@@ -11,5 +11,6 @@
     "subPackages":  [],
     "dependencies": {
         "pegged": "~>0.4.9",
+        "readline": "~>0.3.0",
     }
 }

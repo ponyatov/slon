@@ -1,6 +1,7 @@
 {
 	"fileVersion": 1,
 	"versions": {
-		"pegged": "0.4.9"
+		"pegged": "0.4.9",
+		"readline": "0.3.0"
 	}
 }

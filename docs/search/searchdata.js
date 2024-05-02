@@ -3,7 +3,7 @@ var indexSectionsWithContent =
   0: "<amrs",
   1: "s",
   2: "mrs",
-  3: "am",
+  3: "amr",
   4: "<s"
 };
 
